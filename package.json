@@ -1,0 +1,29 @@
+{
+  "name": "parcel-react-ssr-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "/dist",
+  "scripts": {
+    "build": "yarn run build:client && yarn run build:server",
+    "build:client": "parcel build app/client.tsx -d dist/client",
+    "build:server": "parcel build server/index.ts -d dist/server --target=node8",
+    "start:prod": "node dist/server",
+    "start:dev": "parcel start app/dev_index.html"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@types/react-router": "^5.1.7",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "^0.0.6",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  }
+}
